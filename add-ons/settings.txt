@@ -1,0 +1,60 @@
+macro setJobStats {
+	log chosens stats $.param[0]
+	switch ($.param[0]) {
+		case (== battlepriest) {
+			[
+				do conf statsAddAuto 1
+				do conf statsAddAuto_list 20 agi, 20 str, 20 dex, 10 int, 40 agi, 30 str, 40 dex, 30 vit, 30 int, 60 str, 80 agi
+				do conf statsAddAuto_dontUseBonus 0
+				do conf statsAdd_over_99 0
+				
+				do conf skillsAddAuto 1
+				do conf skillsAddAuto_list AL_DP 10, AL_DEMONBANE 10, AL_RUWACH 1, AL_TELEPORT 2, AL_WARP 4, AL_PNEUMA 1, AL_HEAL 5, AL_INCAGI 7, AL_DECAGI 1, AL_ANGELUS 1, AL_BLESSING 7
+			]
+		}
+		else {
+			log none was specified...
+		}
+	}
+}
+
+macro setMinimal {
+	log === Set Defaults === =
+	[
+		do conf autoResponse 1
+		do conf autoResponseOnHeal 1
+		do conf pauseCharServer &rand(1,2)
+		do conf pauseMapServer &rand(1,2)
+		do conf attackAuto 2
+		do conf route_randomWalk 1
+		do conf allowedMaps none
+		do conf allowedMaps_reaction 0
+		do conf attackAuto_inLockOnly 2
+		do conf dcPause 0
+		do conf dcOnServerClose 1
+		do conf dcOnServerShutDown 1
+		do conf partyAuto 2
+		do conf partyAutoShare 1
+		do conf partyAutoShareItem 1
+		do conf partyAutoShareItemDiv 1
+		do conf showDomain 0
+		do conf squelchDomains ai_attack, attacked, attackedMiss, console, skill, selfSkill, exp, attackMon, attackMonMiss, drop, teleport, useTeleport, emotion, info, list
+		do conf verbose 0
+		do conf verboseDomains none
+		do conf logDead 0
+		do conf logConsole 0
+		do conf sleepTime 150000			
+	]
+	log === Setting Defaults Done! === =
+	
+	log === Setting AutoMap === =
+	
+	[
+		do conf -f autoMapChange 0
+		do conf -f autoMapChange_time 7200
+		do conf -f autoMapChange_timeSeed 7200
+		do conf -f autoMapChange_list none
+	]
+	
+	log === Setting AutoMap Done! === =
+}

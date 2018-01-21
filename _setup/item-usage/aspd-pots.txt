@@ -1,0 +1,20 @@
+useSelf_item Awakening Potion {
+	whenStatusInactive Awakening Potion
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 10
+}
+
+useSelf_item Concentration Potion {
+	whenStatusInactive Concentration Potion
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 10
+}
+
+useSelf_item Berserk Potion {
+	whenStatusInactive Berserk Potion
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 10
+}

@@ -1,0 +1,68 @@
+#_______________________________________________________________#
+# 										  						
+# CHANGE GRINDING SPOT      	  							
+#   															
+# NOTICE : Do not forget to set your lockMap lvl are based 		
+#		   between this e.g (base lvl 10 >= betwen <= 25)		
+#_______________________________________________________________#
+
+automacro SetGrindingSpot {
+	BaseLevel >= 10
+	JobIDNot 0
+	exclusive 1
+	run-once 1
+	timeout 1800
+	call ChangeGrindMaps
+}
+
+macro ChangeGrindMaps {
+	$LVL25 = none; $LVL35 = none; $LVL45 = none; $LVL55 = none; 
+	$LVL65 = none; $LVL75 = none; $LVL85 = none; $LVL99 = none; 
+	
+	switch ($.BaseLevelLast) {
+		case (<= 25) {
+			if (&config(lockMap) == $LVL25) stop
+			do conf lockMap $LVL25
+			release GrindingTime
+		}
+		case (<= 35) {
+			if (&config(lockMap) == $LVL35) stop
+			do conf lockMap $LVL35
+			release GrindingTime
+		}
+		case (<= 45) {
+			if (&config(lockMap) == $LVL45) stop
+			do conf lockMap $LVL45
+			release GrindingTime
+		}
+		case (<= 55) {
+			if (&config(lockMap) == $LVL55) stop
+			do conf lockMap $LVL55
+			release GrindingTime
+		}
+		case (<= 65) {
+			if (&config(lockMap) == $LVL65) stop
+			do conf lockMap $LVL65
+			release GrindingTime
+		}
+		case (<= 75) {
+			if (&config(lockMap) == $LVL75) stop
+			do conf lockMap $LVL75
+			release GrindingTime
+		}
+		case (<= 85) {
+			if (&config(lockMap) == $LVL85) stop
+			do conf lockMap $LVL85
+			release GrindingTime
+		}
+		case (<= 99) {
+			if (&config(lockMap) == $LVL99) stop
+			do conf lockMap $LVL99
+			release GrindingTime
+		}
+		else {
+			log [You have reached the max level] Congratulations!
+			stop
+		}
+	}
+}
