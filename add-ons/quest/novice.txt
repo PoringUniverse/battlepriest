@@ -227,6 +227,7 @@ automacro HitTheGrounds {
 	run-once 1
 	call {
 		[
+			do conf statsAddAuto 1
 			do conf statsAddAuto_list 20 agi, 20 str, 20 dex, 10 int, 40 agi, 30 str, 40 dex, 30 vit, 30 int, 60 str, 80 agi
 			do conf route_randomWalk 1
 			do conf attackAuto 2
