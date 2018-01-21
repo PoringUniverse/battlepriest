@@ -23,42 +23,42 @@ macro ChangeGrindMaps {
 		case (<= 25) {
 			if (&config(lockMap) == $LVL25) stop
 			do conf lockMap $LVL25
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 35) {
 			if (&config(lockMap) == $LVL35) stop
 			do conf lockMap $LVL35
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 45) {
 			if (&config(lockMap) == $LVL45) stop
 			do conf lockMap $LVL45
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 55) {
 			if (&config(lockMap) == $LVL55) stop
 			do conf lockMap $LVL55
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 65) {
 			if (&config(lockMap) == $LVL65) stop
 			do conf lockMap $LVL65
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 75) {
 			if (&config(lockMap) == $LVL75) stop
 			do conf lockMap $LVL75
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 85) {
 			if (&config(lockMap) == $LVL85) stop
 			do conf lockMap $LVL85
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		case (<= 99) {
 			if (&config(lockMap) == $LVL99) stop
 			do conf lockMap $LVL99
-			release GrindingTime
+			release SetGrindingSpot
 		}
 		else {
 			log [You have reached the max level] Congratulations!
