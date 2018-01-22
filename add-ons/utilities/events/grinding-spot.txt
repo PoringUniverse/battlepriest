@@ -16,8 +16,8 @@ automacro SetGrindingSpot {
 }
 
 macro ChangeGrindMaps {
-	$LVL25 = none; $LVL35 = none; $LVL45 = none; $LVL55 = none; 
-	$LVL65 = none; $LVL75 = none; $LVL85 = none; $LVL99 = none; 
+	$LVL25 = pay_fild06; $LVL35 = pay_fild05; $LVL45 = mjolnir_09; $LVL55 = mjolnir_03; 
+	$LVL65 = gef_fild11; $LVL75 = none; $LVL85 = none; $LVL99 = none; 
 	
 	switch ($.BaseLevelLast) {
 		case (<= 25) {
